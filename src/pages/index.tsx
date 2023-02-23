@@ -1,5 +1,7 @@
 import * as React from "react"
 import type { HeadFC, PageProps } from "gatsby"
+import { Link } from 'gatsby'
+import Layout from '../components/layout'
 
 const pageStyles = {
   color: "#232129",
@@ -136,6 +138,15 @@ const links = [
   },
 ]
 
+const IndexPage = () => {
+  return (
+    <Layout pageTitle="Home Page">
+      <p>I'm making this by following the Gatsby Tutorial.</p>
+    </Layout>
+  )
+}
+
+/*
 const IndexPage: React.FC<PageProps> = () => {
   return (
     <main style={pageStyles}>
@@ -187,7 +198,12 @@ const IndexPage: React.FC<PageProps> = () => {
     </main>
   )
 }
-
+*/
 export default IndexPage
 
-export const Head: HeadFC = () => <title>Home Page</title>
+export const Head = () => (
+  <>
+    <title>Gatsby Sample Site</title>
+    <meta name="description" content="Your description" />
+  </>
+)
