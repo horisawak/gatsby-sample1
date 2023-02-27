@@ -3,6 +3,7 @@ import type { HeadFC, PageProps } from "gatsby"
 import { Link } from 'gatsby'
 import Layout from '../components/layout'
 import { StaticImage } from 'gatsby-plugin-image'
+import Seo from '../components/seo'
 
 const pageStyles = {
   color: "#232129",
@@ -206,9 +207,4 @@ const IndexPage: React.FC<PageProps> = () => {
 */
 export default IndexPage
 
-export const Head = () => (
-  <>
-    <title>Gatsby Sample Site</title>
-    <meta name="description" content="Your description" />
-  </>
-)
+export const Head = () => <Seo title="Home Page" />
